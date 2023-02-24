@@ -1,3 +1,4 @@
+DROP DATABASE dz4;
 CREATE DATABASE dz4;
 USE dz4;
 
@@ -39,6 +40,10 @@ FROM cats c
 JOIN shops s
 ON c.shops_id = s.id
 WHERE c.name = "Murzik";
+
+SELECT s.shopname
+FROM cats c, shops s
+WHERE c.shops_id = s.id AND c.name = "Murzik";
 
 SELECT c.name, s.shopname
 FROM cats c
